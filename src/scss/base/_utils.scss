@@ -1,7 +1,7 @@
 .container {
-    margin: 0 auto;
     width: 100%;
-    max-width: 128rem;
+    max-width: 1222px;
+    margin: 0 auto;
 }
 
 .color-accent {
@@ -18,9 +18,9 @@
 
 .inset-0 {
     top: 0px;
-    left: 0px;
     right: 0px;
     bottom: 0px;
+    left: 0px;
 }
 
 .align-center {
@@ -45,14 +45,14 @@
 }
 
 .visually-hidden {
-    position: absolute;
-    padding: 0;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    clip-path: inset(100%) !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
 }

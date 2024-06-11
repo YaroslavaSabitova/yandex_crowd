@@ -1,0 +1,35 @@
+.logo {
+    display: flex;
+    max-width: 245px;
+    padding: 1px 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-grey);
+
+    &__image {
+        display: flex;
+        width: 37.5%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        &_horse path {
+            fill: var(--color-grey);
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 108%;
+        text-transform: uppercase;
+    }
+}

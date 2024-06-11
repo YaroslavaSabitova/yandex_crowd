@@ -1,0 +1,38 @@
+.shine {
+    &-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+        &::before {
+            @include pseudoelem;
+            z-index: -1;
+            background: url(../img/bg.png) center/cover no-repeat;
+            background-color: #e9ded4;
+            background-blend-mode: color-burn;
+        }
+    }
+
+    &-element {
+        position: absolute;
+        z-index: 2000;
+        width: 25px;
+        height: 25px;
+        filter: blur(5px);
+        transition: transform 0.5s ease;
+        transform: translate(-50%, -50%) scale(0);
+        pointer-events: none;
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+
+        path {
+            fill: #ff0000;
+        }
+
+        &.active {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

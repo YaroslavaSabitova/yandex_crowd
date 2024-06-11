@@ -1,0 +1,12 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 26px 0;
+
+    background-color: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 10px 13px rgba(163, 6, 60, 0.05);
+    backdrop-filter: blur(10px);
+}
