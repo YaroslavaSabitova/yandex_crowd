@@ -1,0 +1,38 @@
+html,
+body {
+    font-size: 62.5%; // 1rem = 10px
+    scroll-behavior: smooth;
+}
+
+body {
+    // font-family: var(--font-family);
+    color: var(--color-black);
+    background-color: var(--color-bg);
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+
+    // preloader imgs
+
+    &::after {
+        content: url(../img/account.svg);
+        position: absolute;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+}
+
+// @font-face {
+//     font-family: 'Gilroy';
+//     font-style: normal;
+//     font-weight: normal;
+//     src: url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+//         url('../fonts/Gilroy-Light.woff2') format('woff2'),
+//         url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
+//         url('../fonts/Gilroy-Light.woff') format('woff'),
+//         url('../fonts/Gilroy-ExtraBold.ttf') format('ttf'),
+//         url('../fonts/Gilroy-Light.ttf') format('ttf');
+//     font-display: swap;
+// }

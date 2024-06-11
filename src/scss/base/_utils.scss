@@ -1,0 +1,58 @@
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 128rem;
+}
+
+.color-accent {
+    color: var(--color-accent);
+}
+
+.none {
+    display: none !important;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.inset-0 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-X {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-Y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.visually-hidden {
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
