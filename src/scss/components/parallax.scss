@@ -1,0 +1,67 @@
+.parallax {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--color-transparent);
+    transform-style: preserve-3d;
+    perspective: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    user-select: none;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        visibility: hidden;
+    }
+
+    &__layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        background: var(--color-transparent);
+
+        &_text {
+            top: 305px;
+            left: 140px;
+            z-index: 2;
+            width: 80%;
+            max-width: 940px;
+            margin: 0 auto;
+            font-size: 8rem;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        &_0 {
+            background: url(../img/queen.png) 0% 100% / contain no-repeat;
+            transform: translateY(0px) translateZ(-100px) scale(2);
+        }
+
+        &_1 {
+            background: url(../img/king.png) 0% 100% / contain no-repeat;
+            transform: translateY(0px) translateZ(-75px) scale(1.75);
+        }
+
+        &_2 {
+            z-index: 3;
+            background: url(../img/city.png) 0% 100% / contain no-repeat;
+            transform: translateY(0px) translateZ(-50px) scale(1.5);
+        }
+
+        &_3 {
+            z-index: 4;
+            background: url(../img/pawn.png) 0% 100% / contain no-repeat;
+            transform: translateY(0px) translateZ(-25px) scale(1.25);
+        }
+
+        &_4 {
+            z-index: 4;
+            background: url(../img/horse.png) 0% 100% / contain no-repeat;
+            transform: translateY(0px) translateZ(0px) scale(1);
+        }
+    }
+}
