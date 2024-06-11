@@ -1,21 +1,20 @@
 html,
 body {
-    font-size: 62.5%; // 1rem = 10px
+    font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
 body {
     padding-bottom: 70rem;
-    // font-family: var(--font-family);
+    font-family: var(--font-family);
     color: var(--color-black);
     background-color: var(--color-bg);
     transition: all 0.5s ease;
     overflow-x: hidden;
 
-    // preloader imgs
-
     &::after {
-        // content: url(../img/account.svg);
+        content: url(../img/bg.png) url(../img/city.png) url(../img/horse.png) url(../img/king.png)
+            url(../img/pawn.png) url(../img/queen.png);
         position: absolute;
         z-index: -1;
         width: 0;
@@ -24,16 +23,3 @@ body {
         overflow: hidden;
     }
 }
-
-// @font-face {
-//     font-family: 'Gilroy';
-//     font-style: normal;
-//     font-weight: normal;
-//     src: url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
-//         url('../fonts/Gilroy-Light.woff2') format('woff2'),
-//         url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
-//         url('../fonts/Gilroy-Light.woff') format('woff'),
-//         url('../fonts/Gilroy-ExtraBold.ttf') format('ttf'),
-//         url('../fonts/Gilroy-Light.ttf') format('ttf');
-//     font-display: swap;
-// }
