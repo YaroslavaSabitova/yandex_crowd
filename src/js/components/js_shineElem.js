@@ -1,6 +1,6 @@
 export default function () {
-    const shineContainer = document.querySelector('.js-shine-container');
-    const shineElement = document.querySelector('.js-shine-element');
+    const shineContainer = document.querySelector('.js_shine-container');
+    const shineElement = document.querySelector('.js_shine-element');
 
     shineContainer.addEventListener('mousemove', event => {
         shineElement.classList.add('active');

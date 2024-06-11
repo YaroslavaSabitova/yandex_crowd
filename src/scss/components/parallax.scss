@@ -1,6 +1,10 @@
 .parallax {
     position: relative;
-    min-height: 100vh;
+
+    width: 100%;
+    min-height: 79vh;
+    max-width: 1627px;
+    margin: 0 auto;
     background-color: var(--color-transparent);
     transform-style: preserve-3d;
     perspective: 100px;
@@ -25,13 +29,10 @@
         background: var(--color-transparent);
 
         &_text {
-            top: 305px;
-            left: 140px;
+            top: 140px;
+            left: 200px;
             z-index: 2;
-            width: 80%;
-            max-width: 940px;
-            margin: 0 auto;
-            font-size: 8rem;
+            max-width: 542px;
             opacity: 1;
             transition: opacity 0.3s ease;
         }

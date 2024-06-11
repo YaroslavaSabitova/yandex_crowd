@@ -1,0 +1,43 @@
+.title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: left;
+    color: #313131;
+
+    opacity: 0;
+    animation: title 0.7s ease-in 0.7s forwards;
+
+    &__anim {
+        text-align: center;
+        animation: title-anim 0.7s ease-in 0.7s forwards;
+        transform: translateX(-150px);
+
+        &_right {
+            text-align: right;
+        }
+    }
+}
+
+@keyframes title {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes title-anim {
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
