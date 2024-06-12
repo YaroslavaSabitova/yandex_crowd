@@ -6,11 +6,16 @@
     max-width: 1627px;
     margin: 0 auto;
     background-color: var(--color-transparent);
+    border: 1px solid green;
     transform-style: preserve-3d;
     perspective: 100px;
     overflow-x: hidden;
     overflow-y: auto;
     user-select: none;
+
+    @media (max-width: 767px) {
+        min-height: 100vh;
+    }
 
     &::-webkit-scrollbar {
         width: 0px;
@@ -32,6 +37,14 @@
             background-size: cover;
         }
 
+        @media (max-width: 767px) {
+            background-size: cover !important;
+        }
+
+        @media (max-width: 1199px) {
+            background-size: contain !important;
+        }
+
         &_text {
             top: 20%;
             left: 12%;
@@ -44,6 +57,31 @@
 
             @media (max-width: 1628px) {
                 left: 5.3%;
+            }
+
+            @media (max-width: 1199px) {
+                left: 6%;
+                max-width: 450px;
+            }
+
+            @media (max-width: 991px) {
+                left: 7%;
+                max-width: 400px;
+            }
+
+            @media (max-width: 767px) {
+                left: 0;
+                width: 60%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 575px) {
+                width: 80%;
+            }
+
+            @media (max-width: 376px) {
+                width: 90%;
             }
         }
 
@@ -64,13 +102,13 @@
         }
 
         &_3 {
-            z-index: 4;
+            z-index: 5;
             background: url(../img/pawn.png) center bottom no-repeat;
             transform: translateY(0px) translateZ(-25px) scale(1.25);
         }
 
         &_4 {
-            z-index: 4;
+            z-index: 5;
             background: url(../img/horse.png) center bottom no-repeat;
             transform: translateY(0px) translateZ(0px) scale(1);
         }
