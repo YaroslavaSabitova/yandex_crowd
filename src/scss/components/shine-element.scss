@@ -28,7 +28,7 @@
         }
 
         path {
-            fill: #ff0000;
+            fill: var(--color-accent);
         }
 
         &.active {
