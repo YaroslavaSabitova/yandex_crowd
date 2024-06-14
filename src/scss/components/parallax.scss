@@ -63,7 +63,7 @@
             background-position: -90px bottom !important;
         }
 
-        &_round {
+        &_circle {
             max-width: 66rem;
             max-height: 66rem;
             background-color: var(--color-accent);
@@ -72,9 +72,7 @@
             transform: translateX(100%) translateY(-28%) translateZ(-100px) scale(2);
 
             @media (max-width: 1399px) {
-                max-width: 60rem;
-                max-height: 60rem;
-                transform: translateX(105%) translateY(-28%) translateZ(-100px) scale(2);
+                transform: translateX(100%) translateY(-28%) translateZ(-100px) scale(2);
             }
 
             @media (max-width: 1199px) {
@@ -105,6 +103,29 @@
                 max-width: 30rem;
                 max-height: 30rem;
                 transform: translateX(-3%) translateY(150%) translateZ(-100px) scale(2);
+            }
+
+            &-text {
+                position: absolute;
+                top: 3.5%;
+                left: 3.5%;
+                display: block;
+                width: 93%;
+                font-family: var(--second-family);
+                font-weight: 400;
+                font-size: 25.6px;
+                text-transform: uppercase;
+                animation: circle 20s linear infinite;
+                overflow: visible;
+                mix-blend-mode: overlay;
+
+                path {
+                    fill: none;
+                }
+
+                text {
+                    fill: var(--color-text);
+                }
             }
 
             &::before {
@@ -171,5 +192,11 @@
                 transform: translateX(-35px) translateY(16px) translateZ(0) scale(1);
             }
         }
+    }
+}
+
+@keyframes circle {
+    to {
+        transform: rotate(360deg);
     }
 }
