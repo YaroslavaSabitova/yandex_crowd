@@ -22,6 +22,7 @@
 
     &__container {
         top: 15.5%;
+        z-index: 2;
     }
 
     &__text {
@@ -62,16 +63,68 @@
             background-position: -90px bottom !important;
         }
 
-        &_0 {
+        &_round {
+            max-width: 66rem;
+            max-height: 66rem;
+            background-color: var(--color-accent);
+            border: none;
+            border-radius: 100%;
+            transform: translateX(100%) translateY(-28%) translateZ(-100px) scale(2);
+
+            @media (max-width: 1399px) {
+                max-width: 60rem;
+                max-height: 60rem;
+                transform: translateX(105%) translateY(-28%) translateZ(-100px) scale(2);
+            }
+
+            @media (max-width: 1199px) {
+                max-width: 55rem;
+                max-height: 55rem;
+                transform: translateX(105%) translateY(-5%) translateZ(-100px) scale(2);
+            }
+
+            @media (max-width: 991px) {
+                max-width: 50rem;
+                max-height: 50rem;
+                transform: translateX(97%) translateY(37%) translateZ(-100px) scale(2);
+            }
+
+            @media (max-width: 767px) {
+                max-width: 45rem;
+                max-height: 45rem;
+                transform: translateX(105%) translateY(63%) translateZ(-100px) scale(2);
+            }
+
+            @media (max-width: 575px) {
+                max-width: 40rem;
+                max-height: 40rem;
+                transform: translateX(0%) translateY(100%) translateZ(-100px) scale(2);
+            }
+
+            @media (max-width: 376px) {
+                max-width: 30rem;
+                max-height: 30rem;
+                transform: translateX(-3%) translateY(150%) translateZ(-100px) scale(2);
+            }
+
+            &::before {
+                @include pseudoelem;
+                background: url(../img/bg.png) center/cover no-repeat;
+                border-radius: 100%;
+                mix-blend-mode: color-burn;
+            }
+        }
+
+        &_queen {
             background: url(../img/queen.png) center/contain no-repeat;
-            transform: translateY(0px) translateZ(-100px) scale(2);
+            transform: translateY(0px) translateZ(-85px) scale(1.85);
 
             @media (max-width: 575px) {
                 background: url(../img/queen-s.png) center/contain no-repeat;
             }
         }
 
-        &_1 {
+        &_king {
             background: url(../img/king.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-75px) scale(1.75);
 
@@ -80,7 +133,7 @@
             }
         }
 
-        &_2 {
+        &_city {
             z-index: 3;
             background: url(../img/city.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-50px) scale(1.5);
@@ -90,13 +143,13 @@
             }
         }
 
-        &_3 {
+        &_pawn {
             z-index: 5;
             background: url(../img/pawn.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-25px) scale(1.25);
         }
 
-        &_4 {
+        &_horse {
             z-index: 5;
             background: url(../img/horse.png) center/contain no-repeat;
             transform: translateY(45px) translateZ(0px) scale(1);
@@ -115,7 +168,6 @@
             }
 
             @media (max-width: 376px) {
-                background: url(../img/horse-s.png) center/contain no-repeat;
                 transform: translateX(-35px) translateY(16px) translateZ(0) scale(1);
             }
         }
