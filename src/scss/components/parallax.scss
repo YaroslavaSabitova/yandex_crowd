@@ -1,8 +1,7 @@
 .parallax {
     position: relative;
-
     width: 100%;
-    min-height: 79vh;
+    min-height: 100vh;
     max-width: 100%;
     margin: 0 auto;
     background-color: var(--color-transparent);
@@ -11,10 +10,6 @@
     overflow-x: hidden;
     overflow-y: auto;
     user-select: none;
-
-    @media (max-width: 767px) {
-        min-height: 100vh;
-    }
 
     &__layer,
     &__container {
@@ -26,7 +21,7 @@
     }
 
     &__container {
-        top: 20%;
+        top: 15.5%;
     }
 
     &__text {
@@ -40,10 +35,10 @@
 
     &__layer {
         max-width: 160.5rem;
-        background-size: contain !important;
 
         @media (max-width: 1399px) {
             width: 150rem;
+            background-position: center bottom !important;
         }
 
         @media (max-width: 1199px) {
@@ -60,55 +55,68 @@
 
         @media (max-width: 575px) {
             width: 60rem;
-            background-position: -25px 100% !important;
+            background-position: -25px bottom !important;
         }
 
         @media (max-width: 376px) {
-            background-position: -90px 100% !important;
+            background-position: -90px bottom !important;
         }
 
         &_0 {
-            background: url(../img/queen.png) center bottom no-repeat;
+            background: url(../img/queen.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-100px) scale(2);
 
             @media (max-width: 575px) {
-                background: url(../img/queen-s.png) center bottom no-repeat;
+                background: url(../img/queen-s.png) center/contain no-repeat;
             }
         }
 
         &_1 {
-            background: url(../img/king.png) center bottom no-repeat;
+            background: url(../img/king.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-75px) scale(1.75);
 
             @media (max-width: 575px) {
-                background: url(../img/king-s.png) center bottom no-repeat;
+                background: url(../img/king-s.png) center/contain no-repeat;
             }
         }
 
         &_2 {
             z-index: 3;
-            background: url(../img/city.png) center bottom no-repeat;
+            background: url(../img/city.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-50px) scale(1.5);
 
             @media (max-width: 575px) {
-                background: url(../img/city-s.png) center bottom no-repeat;
+                background: url(../img/city-s.png) center/contain no-repeat;
             }
         }
 
         &_3 {
             z-index: 5;
-            background: url(../img/pawn.png) center bottom no-repeat;
+            background: url(../img/pawn.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-25px) scale(1.25);
         }
 
         &_4 {
             z-index: 5;
-            background: url(../img/horse.png) center bottom no-repeat;
-            transform: translateY(0px) translateZ(0px) scale(1);
+            background: url(../img/horse.png) center/contain no-repeat;
+            transform: translateY(45px) translateZ(0px) scale(1);
+
+            @media (max-width: 1199px) {
+                transform: translateY(34px) translateZ(0px) scale(1);
+            }
+
+            @media (max-width: 991px) {
+                transform: translateY(20px) translateZ(0px) scale(1);
+            }
 
             @media (max-width: 575px) {
-                background: url(../img/horse-s.png) center bottom no-repeat;
+                background: url(../img/horse-s.png) center/contain no-repeat;
                 transform: translateY(16px) translateZ(0) scale(1);
+            }
+
+            @media (max-width: 376px) {
+                background: url(../img/horse-s.png) center/contain no-repeat;
+                transform: translateX(-35px) translateY(16px) translateZ(0) scale(1);
             }
         }
     }
