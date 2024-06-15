@@ -37,7 +37,6 @@
     }
 
     &__description {
-        margin-bottom: 40px;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 1.8rem;
@@ -46,6 +45,10 @@
         color: var(--color-text);
         opacity: 0;
         animation: title-descr 0.7s ease-in 1.5s forwards;
+
+        @media (max-width: 575px) {
+            text-align: left;
+        }
     }
 }
 

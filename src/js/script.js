@@ -6,4 +6,8 @@ import js_title from './components/js_title.js';
     js_shineElem();
     js_header();
     js_title();
+
+    document.querySelector('.button').addEventListener('click', function () {
+        window.location.href = 'https://qna.habr.com/q/1306664';
+    });
 })();

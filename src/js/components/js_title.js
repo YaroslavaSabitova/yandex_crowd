@@ -3,7 +3,7 @@ export default function () {
     const title = document.querySelector('.js_title');
 
     const SPEED = 1;
-    const OPACITY = -0.2;
+    const OPACITY = -0.4;
 
     const parallaxHeight = parallax.getBoundingClientRect().height.toFixed(0);
 

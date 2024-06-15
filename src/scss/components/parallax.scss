@@ -26,7 +26,69 @@
     }
 
     &__text {
+        margin-bottom: 4rem;
+
+        @media (max-width: 575px) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__text,
+    &__buttons {
         max-width: 54.2rem;
+        border: 1px solid red;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.4rem;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &_dark {
+            padding: 2rem 4.5rem;
+            color: var(--color-white);
+            background: var(--color-dark-grey);
+            border: 2px solid var(--color-dark-grey);
+
+            @media (max-width: 767px) {
+                padding: 2rem 3rem;
+            }
+        }
+
+        &_light {
+            padding: 2rem 9rem;
+            color: var(--color-dark-grey);
+            background: var(--color-transparent);
+            border: 2px solid var(--color-dark-grey);
+
+            @media (max-width: 575px) {
+                background: var(--color-white);
+                opacity: 0.9;
+            }
+        }
+
+        &_dark,
+        &_light {
+            // @media (max-width: 767px) {
+            //     padding: 1.3rem 0rem;
+            // }
+
+            @media (max-width: 575px) {
+                border: none;
+            }
+
+            @media (max-width: 376px) {
+                padding: 1.3rem 0rem;
+            }
+        }
     }
 
     &::-webkit-scrollbar {
@@ -37,9 +99,12 @@
     &__layer {
         max-width: 160.5rem;
 
+        @media (max-width: 1550px) {
+            background-position: center bottom !important;
+        }
+
         @media (max-width: 1399px) {
             width: 150rem;
-            background-position: center bottom !important;
         }
 
         @media (max-width: 1199px) {
@@ -107,15 +172,15 @@
 
             &-text {
                 position: absolute;
-                top: 3.5%;
-                left: 3.5%;
+                top: 2.5%;
+                left: 2.5%;
                 display: block;
-                width: 93%;
+                width: 95%;
                 font-family: var(--second-family);
                 font-weight: 400;
-                font-size: 25.6px;
+                font-size: 19px;
                 text-transform: uppercase;
-                animation: circle 20s linear infinite;
+                animation: circle 35s linear infinite;
                 overflow: visible;
                 mix-blend-mode: overlay;
 
@@ -124,7 +189,7 @@
                 }
 
                 text {
-                    fill: var(--color-text);
+                    fill: var(--color-black);
                 }
             }
 
@@ -155,7 +220,6 @@
         }
 
         &_city {
-            z-index: 3;
             background: url(../img/city.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-50px) scale(1.5);
 
@@ -165,13 +229,11 @@
         }
 
         &_pawn {
-            z-index: 5;
             background: url(../img/pawn.png) center/contain no-repeat;
             transform: translateY(0px) translateZ(-25px) scale(1.25);
         }
 
         &_horse {
-            z-index: 5;
             background: url(../img/horse.png) center/contain no-repeat;
             transform: translateY(45px) translateZ(0px) scale(1);
 
