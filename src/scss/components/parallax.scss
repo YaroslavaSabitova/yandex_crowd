@@ -40,7 +40,6 @@
     &__text,
     &__buttons {
         max-width: 54.2rem;
-        border: 1px solid red;
     }
 
     &__buttons {
@@ -98,7 +97,7 @@
             }
 
             @media (max-width: 376px) {
-                padding: 1.3rem 0rem;
+                padding: 1.3rem 1rem;
             }
 
             &:active,
@@ -244,7 +243,7 @@
 
         &_pawn {
             background: url(../img/pawn.png) center bottom/contain no-repeat;
-            transform: translateY(0px) translateZ(-25px) scale(1.25);
+            transform: translateY(0px) translateZ(-15px) scale(1.15);
         }
 
         &_horse {
