@@ -1,0 +1,141 @@
+.game-info {
+    margin-bottom: 18.8rem;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_first {
+            margin-bottom: 3.6rem;
+        }
+
+        &__text {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 3.6rem;
+            line-height: 135%;
+            text-transform: uppercase;
+            color: var(--color-text);
+
+            &_lecture {
+                max-width: 76.4rem;
+            }
+
+            &_session {
+                max-width: 68rem;
+            }
+        }
+
+        &__image {
+            &_animated {
+                position: relative;
+                display: flex;
+                width: 39.4rem;
+                height: 25rem;
+                align-items: center;
+                justify-content: space-between;
+                overflow: hidden;
+
+                img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                }
+
+                img:nth-of-type(1) {
+                    animation: glitch-1 10s linear 2s infinite;
+                }
+
+                img:nth-of-type(2) {
+                    position: absolute;
+                    top: 0;
+                    left: -1px;
+                    z-index: 1;
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                    animation: glitch 10s linear 2.2s infinite;
+                }
+            }
+
+            &_players {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+@keyframes glitch {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        filter: blur(2px);
+    }
+
+    15% {
+        filter: blur(0);
+    }
+
+    20% {
+        opacity: 0;
+        filter: sepia(100%);
+    }
+
+    40% {
+        opacity: 1;
+        transform: skew(2deg, 2deg);
+    }
+
+    50% {
+        opacity: 1;
+        filter: sepia(100%);
+    }
+
+    60% {
+        opacity: 0;
+        filter: invert(100%);
+    }
+
+    70% {
+        opacity: 1;
+        filter: grayscale(1);
+        transform: skew(2deg, 2deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: skew(0deg, 0deg);
+    }
+}
+
+@keyframes glitch-1 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+        filter: sepia(100%);
+    }
+
+    60% {
+        opacity: 1;
+        filter: invert(100%);
+    }
+
+    70% {
+        opacity: 1;
+        filter: grayscale(1);
+        transform: skew(1deg, 1deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: skew(0deg, 0deg);
+    }
+}
