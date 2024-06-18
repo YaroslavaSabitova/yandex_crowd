@@ -5,11 +5,11 @@
     padding: 0 72px;
     border: 1px solid #07933d;
 
-    @media (max-width: 575px) {
-        padding: 0 60px;
+    @media (max-width: 991px) {
+        padding: 0 50px;
     }
 
-    @media (max-width: 376px) {
+    @media (max-width: 575px) {
         padding: 0 20px;
     }
 }

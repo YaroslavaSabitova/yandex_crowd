@@ -30,14 +30,22 @@
     }
 
     &__text {
+        max-width: 54.2rem;
         margin-bottom: 4rem;
+
+        @media (max-width: 991px) {
+            max-width: 49rem;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 43rem;
+        }
 
         @media (max-width: 575px) {
             margin-bottom: 3.2rem;
         }
     }
 
-    &__text,
     &__buttons {
         max-width: 54.2rem;
     }

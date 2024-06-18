@@ -20,15 +20,10 @@
 
     @media (max-width: 991px) {
         font-size: 4rem;
-        text-align: center;
     }
 
     @media (max-width: 767px) {
         font-size: 3.6rem;
-    }
-
-    @media (max-width: 376px) {
-        text-align: left;
     }
 
     &__anim {
