@@ -71,13 +71,13 @@
 
         &__image {
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             border: 1px solid rgb(255, 0, 204);
             overflow: hidden;
 
             img {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
                 min-width: 100%;
                 min-height: 100%;
@@ -108,17 +108,56 @@
                 }
 
                 img:nth-of-type(2) {
-                    position: absolute;
-                    top: 0;
                     left: -1px;
                     z-index: 2;
                     animation: glitch 10s linear 2s infinite;
                 }
             }
 
+            &_elements-animated {
+                width: 53rem;
+                height: 56.9rem;
+            }
+
             &_paper {
-                animation: paper 5s linear 2s infinite;
-                transform: rotate(0deg);
+                filter: hue-rotate(0deg);
+                animation: paper 6s linear 2s infinite;
+            }
+
+            &_banknote {
+                animation: banknote 2s ease-in-out 2s infinite;
+            }
+
+            &_splash-big {
+                animation: splash-big 2s ease-in-out 2s infinite;
+                transform: scale(1.05);
+            }
+
+            &_player2 {
+                opacity: 0;
+                animation: player2 8s linear 2s infinite;
+            }
+
+            &_player1 {
+                opacity: 1;
+                animation: player1 8s linear 2s infinite;
+            }
+
+            &_splash-small {
+                animation: splash-small 2s linear 2s infinite;
+                transform: scale(1);
+                transform-origin: center left;
+            }
+
+            &_horse-black {
+                animation: horse-black 2s linear 2s infinite;
+                transform-origin: bottom;
+            }
+
+            &_hand {
+                animation: hand 2s ease-in-out 2s infinite;
+                transform: rotate(-15deg);
+                transform-origin: center;
             }
         }
     }
@@ -196,13 +235,94 @@
 }
 
 @keyframes paper {
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes banknote {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes splash-big {
     from {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes player2 {
+    0% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes player1 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+@keyframes splash-small {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes horse-black {
+    0% {
         transform: rotate(0deg);
     }
     50% {
-        transform: rotate(45deg);
+        transform: rotate(-12deg);
     }
-    to {
+    100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes hand {
+    0% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(-1deg) scale(0.85);
+    }
+    100% {
+        transform: rotate(-15deg);
     }
 }
