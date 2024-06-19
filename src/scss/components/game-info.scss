@@ -70,23 +70,28 @@
         }
 
         &__image {
-            &_players {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgb(255, 0, 204);
+            overflow: hidden;
+
+            img {
                 width: 100%;
                 min-width: 100%;
                 min-height: 100%;
                 object-fit: cover;
+            }
+
+            &_players {
                 border-radius: 100%;
             }
 
-            &_animated {
-                position: relative;
-                display: flex;
+            &_glitch-animated {
                 width: 39.4rem;
                 height: 25rem;
-                align-items: center;
-                justify-content: space-between;
                 border-radius: 100%;
-                overflow: hidden;
 
                 @media (max-width: 991px) {
                     margin: 2.4rem 0;
@@ -106,11 +111,14 @@
                     position: absolute;
                     top: 0;
                     left: -1px;
-                    z-index: 1;
-                    min-width: 100%;
-                    min-height: 100%;
+                    z-index: 2;
                     animation: glitch 10s linear 2s infinite;
                 }
+            }
+
+            &_paper {
+                animation: paper 5s linear 2s infinite;
+                transform: rotate(0deg);
             }
         }
     }
@@ -184,5 +192,17 @@
     80% {
         opacity: 1;
         transform: skew(0deg, 0deg);
+    }
+}
+
+@keyframes paper {
+    from {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(0deg);
     }
 }
