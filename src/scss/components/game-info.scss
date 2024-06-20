@@ -80,7 +80,10 @@
             }
 
             &_session {
+                display: flex;
                 max-width: 68rem;
+                flex-direction: column;
+                gap: 6rem;
                 border: 1px solid green;
 
                 @media (max-width: 1199px) {
