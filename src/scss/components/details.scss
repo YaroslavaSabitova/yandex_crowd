@@ -1,9 +1,17 @@
 .details {
+    margin-bottom: 4.8rem;
     font-family: var(--font-family);
     font-size: 2rem;
     line-height: 120%;
     text-transform: none;
-    color: #313131;
+    color: var(--color-text);
+
+    @media (max-width: 376px) {
+        display: flex;
+        margin-bottom: 2.4rem;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
 
     &__info {
         display: flex;
@@ -11,21 +19,94 @@
         flex-wrap: wrap;
         align-items: center;
 
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 376px) {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 1.2rem;
+        }
+
         &:not(:last-child) {
-            border-bottom: 2px solid #d0d0d0;
+            border-bottom: 3px solid var(--color-line);
         }
 
         &_light {
             width: 50%;
-            padding: 1.6rem 0;
             font-weight: 400;
-            border-right: 2px solid #d0d0d0;
+            border-right: 3px solid var(--color-line);
             opacity: 0.7;
+
+            @media (max-width: 767px) {
+                width: 100%;
+                border: unset;
+            }
+
+            &-mobile {
+                @media (max-width: 376px) {
+                    width: 48%;
+                }
+            }
         }
 
         &_dark {
-            padding: 0 1.6rem;
-            font-weight: 700;
+            padding-left: 1.6rem;
+            font-weight: 600;
+
+            @media (max-width: 376px) {
+                padding-left: 0;
+                padding-bottom: 1.6rem !important;
+            }
+
+            .crossed {
+                position: relative;
+                margin-right: 12px;
+
+                &::before {
+                    @include pseudoelem;
+                    top: 50%;
+                    left: 50%;
+                    height: 2px;
+                    background-color: var(--color-red-accent);
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .padding {
+            padding: 1.6rem 0;
+        }
+
+        .padding-bottom {
+            padding-top: 5px;
+            padding-bottom: 1.6rem;
+        }
+
+        .padding-top {
+            padding-top: 1.6rem;
+        }
+
+        .padding,
+        .padding-bottom,
+        .padding-top {
+            @media (max-width: 376px) {
+                padding: 0;
+            }
+        }
+    }
+
+    &__additional {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 120%;
+        text-transform: none;
+        color: var(--color-blue-accent);
+
+        @media (max-width: 376px) {
+            font-size: 1.8rem;
         }
     }
 }

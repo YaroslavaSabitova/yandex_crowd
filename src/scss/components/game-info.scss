@@ -32,7 +32,6 @@
 
         &_second {
             gap: 1.7rem;
-            border: 1px solid red;
 
             @media (max-width: 991px) {
                 flex-direction: column;
@@ -83,12 +82,9 @@
                 display: flex;
                 max-width: 68rem;
                 flex-direction: column;
-                gap: 6rem;
-                border: 1px solid green;
 
                 @media (max-width: 1199px) {
                     max-width: 52rem;
-                    gap: 4.4rem;
                 }
 
                 @media (max-width: 376px) {
@@ -96,6 +92,12 @@
                 }
 
                 .session {
+                    margin-bottom: 6rem;
+
+                    @media (max-width: 767px) {
+                        margin-bottom: 4.4rem;
+                    }
+
                     @media (max-width: 376px) {
                         max-width: 28.8rem;
                     }
@@ -150,7 +152,6 @@
             &_elements-animated {
                 width: 53rem;
                 height: 56.9rem;
-                border: 1px solid black;
 
                 @media (max-width: 991px) {
                     width: 45rem;
