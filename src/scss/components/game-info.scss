@@ -8,7 +8,6 @@
 
         &_first {
             margin-bottom: 3.6rem;
-            border: 1px solid red;
 
             @media (max-width: 991px) {
                 margin-bottom: 3.4rem;
@@ -33,13 +32,16 @@
 
         &_second {
             gap: 1.7rem;
-
             border: 1px solid red;
 
             @media (max-width: 991px) {
                 flex-direction: column;
                 gap: 2.4rem;
                 text-align: center;
+            }
+
+            @media (max-width: 376px) {
+                text-align: left;
             }
         }
 
@@ -79,16 +81,27 @@
 
             &_session {
                 max-width: 68rem;
+                border: 1px solid green;
 
                 @media (max-width: 1199px) {
                     max-width: 52rem;
+                    gap: 4.4rem;
+                }
+
+                @media (max-width: 376px) {
+                    width: 100%;
+                }
+
+                .session {
+                    @media (max-width: 376px) {
+                        max-width: 28.8rem;
+                    }
                 }
             }
         }
 
         &__image {
             position: relative;
-            border: 1px solid rgb(255, 0, 204);
             overflow: hidden;
 
             img {
@@ -134,6 +147,7 @@
             &_elements-animated {
                 width: 53rem;
                 height: 56.9rem;
+                border: 1px solid black;
 
                 @media (max-width: 991px) {
                     width: 45rem;
@@ -142,60 +156,57 @@
 
                 @media (max-width: 575px) {
                     width: 34rem;
-                    height: 48rem;
+                    height: 38rem;
                 }
 
                 @media (max-width: 376px) {
-                    height: 37rem;
-                    max-width: 100%;
+                    width: 37rem;
+                    height: 39rem;
+                    overflow: visible;
                 }
 
                 img {
                     object-fit: contain;
-
-                    @media (max-width: 376px) {
-                        object-fit: cover;
-                    }
                 }
             }
 
             &_paper {
                 filter: hue-rotate(0deg);
-                // animation: paper 6s linear 2s infinite;
+                animation: paper 6s linear 2s infinite;
             }
 
             &_banknote {
-                // animation: banknote 2s ease-in-out 2s infinite;
+                animation: banknote 2s ease-in-out 2s infinite;
             }
 
             &_splash-big {
-                // animation: splash-big 2s ease-in-out 2s infinite;
+                animation: splash-big 2s ease-in-out 2s infinite;
                 transform: scale(1.05);
             }
 
             &_player2 {
                 opacity: 0;
-                // animation: player2 8s linear 2s infinite;
+                animation: player2 8s linear 2s infinite;
             }
 
             &_player1 {
                 opacity: 1;
-                // animation: player1 8s linear 2s infinite;
+                animation: player1 8s linear 2s infinite;
             }
 
             &_splash-small {
-                // animation: splash-small 2s linear 2s infinite;
+                animation: splash-small 2s linear 2s infinite;
                 transform: scale(1);
                 transform-origin: center left;
             }
 
             &_horse-black {
-                // animation: horse-black 2s linear 2s infinite;
+                animation: horse-black 2s linear 2s infinite;
                 transform-origin: bottom;
             }
 
             &_hand {
-                // animation: hand 2s ease-in-out 2s infinite;
+                animation: hand 2s ease-in-out 2s infinite;
                 transform: rotate(-15deg);
                 transform-origin: center;
             }
@@ -311,7 +322,7 @@
     0% {
         opacity: 0;
     }
-    55% {
+    50% {
         opacity: 1;
     }
     100% {
@@ -326,7 +337,7 @@
     50% {
         opacity: 0;
     }
-    90% {
+    100% {
         opacity: 1;
     }
 }
