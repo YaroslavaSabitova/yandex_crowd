@@ -1,0 +1,25 @@
+.steps {
+    position: relative;
+
+    &__title {
+        position: relative;
+        max-width: 80rem;
+        margin-bottom: 5.4rem;
+
+        &_additional {
+            position: absolute;
+            max-width: 28rem;
+            padding: 10px 0 0 20px;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 120%;
+            text-transform: none;
+            color: var(--color-blue-accent);
+
+            @media (max-width: 991px) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

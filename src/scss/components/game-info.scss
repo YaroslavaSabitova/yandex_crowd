@@ -1,5 +1,9 @@
 .game-info {
-    margin-bottom: 18.8rem;
+    margin-bottom: 20rem;
+
+    @media (max-width: 991px) {
+        margin-bottom: 12rem;
+    }
 
     &__wrapper {
         display: flex;

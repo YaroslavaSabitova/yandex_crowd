@@ -1,8 +1,13 @@
 .second-title {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 54px;
+    font-size: 5.4rem;
     line-height: 120%;
     text-transform: uppercase;
     color: var(--color-text);
+
+    @media (max-width: 991px) {
+        font-size: 3.6rem;
+        line-height: 110%;
+    }
 }
