@@ -1,83 +1,71 @@
 @font-face {
-    font-family: 'Montserrat Medium';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/Montserrat Medium.eot');
-    src: url('../fonts/Montserrat Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Montserrat Medium.woff2') format('woff2'),
-        url('../fonts/Montserrat Medium.woff') format('woff'),
-        url('../fonts/Montserrat Medium.ttf') format('truetype');
-    font-stretch: normal;
-    unicode-range: U+0020-2044;
+    src: url('../fonts/Montserrat-Medium.eot');
+    src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/GolosText-Bold.eot');
+    src: url('../fonts/GolosText-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GolosText-Bold.woff2') format('woff2'),
+        url('../fonts/GolosText-Bold.woff') format('woff'),
+        url('../fonts/GolosText-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/GolosText-DemiBold.eot');
+    src: url('../fonts/GolosText-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GolosText-DemiBold.woff2') format('woff2'),
+        url('../fonts/GolosText-DemiBold.woff') format('woff'),
+        url('../fonts/GolosText-DemiBold.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Merriweather';
     font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/Merriweather Regular.eot');
-    src: url('../fonts/Merriweather Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Merriweather Regular.woff2') format('woff2'),
-        url('../fonts/Merriweather Regular.woff') format('woff'),
-        url('../fonts/Merriweather Regular.ttf') format('truetype');
-    font-stretch: normal;
-    unicode-range: U+0020-2044;
+    font-weight: normal;
+    src: url('../fonts/Merriweather-Regular.eot');
+    src: url('../fonts/Merriweather-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Merriweather-Regular.woff2') format('woff2'),
+        url('../fonts/Merriweather-Regular.woff') format('woff'),
+        url('../fonts/Merriweather-Regular.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Golos Text';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/Golos Text Bold.eot');
-    src: url('../fonts/Golos Text Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Golos Text Bold.woff2') format('woff2'),
-        url('../fonts/Golos Text Bold.woff') format('woff'),
-        url('../fonts/Golos Text Bold.ttf') format('truetype');
-    font-stretch: normal;
-    unicode-range: U+0020-2074;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Golos Text';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/Golos Text Regular.eot');
-    src: url('../fonts/Golos Text Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Golos Text Regular.woff2') format('woff2'),
-        url('../fonts/Golos Text Regular.woff') format('woff'),
-        url('../fonts/Golos Text Regular.ttf') format('truetype');
-    font-stretch: normal;
-    unicode-range: U+0020-2074;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Golos Text SemiBold';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/Golos Text SemiBold.eot');
-    src: url('../fonts/Golos Text SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Golos Text SemiBold.woff2') format('woff2'),
-        url('../fonts/Golos Text SemiBold.woff') format('woff'),
-        url('../fonts/Golos Text SemiBold.ttf') format('truetype');
-    font-stretch: normal;
-    unicode-range: U+0020-2074;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Golos Text Medium';
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/Golos Text Medium.eot');
-    src: url('../fonts/Golos Text Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Golos Text Medium.woff2') format('woff2'),
-        url('../fonts/Golos Text Medium.woff') format('woff'),
-        url('../fonts/Golos Text Medium.ttf') format('truetype');
-    font-stretch: normal;
-    unicode-range: U+0020-2074;
+    src: url('../fonts/GolosText-Medium.eot');
+    src: url('../fonts/GolosText-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GolosText-Medium.woff2') format('woff2'),
+        url('../fonts/GolosText-Medium.woff') format('woff'),
+        url('../fonts/GolosText-Medium.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/GolosText-Regular.eot');
+    src: url('../fonts/GolosText-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GolosText-Regular.woff2') format('woff2'),
+        url('../fonts/GolosText-Regular.woff') format('woff'),
+        url('../fonts/GolosText-Regular.ttf') format('truetype');
     font-display: swap;
 }

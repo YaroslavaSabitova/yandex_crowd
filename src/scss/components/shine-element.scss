@@ -2,14 +2,6 @@
     &-container {
         position: relative;
         width: 100%;
-
-        &::before {
-            @include pseudoelem;
-            z-index: -1;
-            background: url(../img/bg.png) center/cover no-repeat;
-            background-color: #e9ded4;
-            background-blend-mode: color-burn;
-        }
     }
 
     &-element {

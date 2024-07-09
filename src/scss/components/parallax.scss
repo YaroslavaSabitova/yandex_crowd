@@ -1,15 +1,23 @@
 .parallax {
     position: relative;
-    width: 100%;
     min-height: 100vh;
-    max-width: 100%;
-    margin: 0 auto;
-    background-color: var(--color-transparent);
+    background-color: var(--color-bg);
     transform-style: preserve-3d;
     perspective: 100px;
     overflow-x: hidden;
     overflow-y: auto;
     user-select: none;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        visibility: hidden;
+    }
+
+    &::before {
+        @include pseudoelem;
+        background: url(../img/bg.png) center/cover no-repeat;
+        mix-blend-mode: color-burn;
+    }
 
     &__layer,
     &__container {
@@ -47,11 +55,8 @@
     }
 
     &__buttons {
-        max-width: 54.2rem;
-    }
-
-    &__buttons {
         display: flex;
+        max-width: 54.2rem;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
@@ -114,11 +119,6 @@
                 filter: opacity(0.7);
             }
         }
-    }
-
-    &::-webkit-scrollbar {
-        width: 0px;
-        visibility: hidden;
     }
 
     &__layer {

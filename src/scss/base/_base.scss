@@ -1,16 +1,16 @@
 html,
 body {
     font-size: 62.5%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
-    padding-bottom: 1px;
+    padding-bottom: 12rem;
     font-family: var(--font-family);
     color: var(--color-black);
-    background-color: var(--color-bg);
+    background-color: var(--color-white);
     transition: all 0.5s ease;
-    overflow-x: hidden;
 
     &::after {
         content: url(../img/bg.png) url(../img/city.png) url(../img/horse.png) url(../img/king.png)
@@ -21,5 +21,21 @@ body {
         height: 0;
         opacity: 0;
         overflow: hidden;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 72px;
+    border: 1px solid #07933d;
+
+    @media (max-width: 991px) {
+        padding: 0 50px;
+    }
+
+    @media (max-width: 575px) {
+        padding: 0 20px;
     }
 }
