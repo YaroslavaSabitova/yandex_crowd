@@ -6,10 +6,15 @@
         max-width: 80rem;
         margin-bottom: 5.4rem;
 
+        @media (max-width: 991px) {
+            max-width: 100%;
+            margin-bottom: 20.4rem;
+        }
+
         &_additional {
             position: absolute;
             max-width: 28rem;
-            padding: 10px 0 0 20px;
+            padding: 9px 0 0 20px;
             font-family: var(--font-family);
             font-weight: 400;
             font-size: 2rem;
@@ -18,7 +23,15 @@
             color: var(--color-blue-accent);
 
             @media (max-width: 991px) {
+                bottom: -100%;
+                left: 0;
+                max-width: 100%;
+                padding: 0;
                 font-size: 1.8rem;
+            }
+
+            @media (max-width: 767px) {
+                bottom: -50%;
             }
         }
     }
