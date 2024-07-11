@@ -8,6 +8,10 @@ export default function () {
     let sliderCount = 0,
         sliderWidth;
 
+    if (sliderCount >= 0) {
+        sliderBtnNext.setAttribute('style', 'background-color: #313131;');
+    }
+
     sliderBtnNext.addEventListener('click', nextSlide);
     sliderBtnPrev.addEventListener('click', prevSlide);
 
@@ -21,16 +25,32 @@ export default function () {
     showSlide();
 
     function nextSlide() {
+        sliderBtnPrev.removeAttribute('style');
+        sliderBtnNext.setAttribute('style', 'background-color: #fbce51;');
+
         sliderCount++;
-        if (sliderCount >= sliderImages.length) sliderCount = 0;
+
+        console.log('sliderCountNext', sliderCount);
+
+        if (sliderCount >= sliderImages.length) {
+            sliderCount = 0;
+        }
 
         rollSlider();
         thisSlide(sliderCount);
     }
 
     function prevSlide() {
+        sliderBtnNext.removeAttribute('style');
+        sliderBtnPrev.setAttribute('style', 'background-color: #313131;');
+
         sliderCount--;
-        if (sliderCount < 0) sliderCount = sliderImages.length - 1;
+
+        console.log('sliderCountPrev', sliderCount);
+
+        if (sliderCount < 0) {
+            sliderCount = sliderImages.length - 1;
+        }
 
         rollSlider();
         thisSlide(sliderCount);
