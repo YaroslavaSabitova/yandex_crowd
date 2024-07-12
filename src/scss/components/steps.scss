@@ -1,5 +1,10 @@
 .steps {
     position: relative;
+    margin-bottom: 20rem;
+
+    @media (max-width: 991px) {
+        margin-bottom: 12rem;
+    }
 
     &__title {
         position: relative;

@@ -25,12 +25,12 @@ export default function () {
     showSlide();
 
     function nextSlide() {
-        sliderBtnPrev.removeAttribute('style');
+        sliderBtnPrev.setAttribute('style', 'background-color: #313131;');
         sliderBtnNext.setAttribute('style', 'background-color: #fbce51;');
 
         sliderCount++;
 
-        console.log('sliderCountNext', sliderCount);
+        // console.log('sliderCountNext', sliderCount);
 
         if (sliderCount >= sliderImages.length) {
             sliderCount = 0;
@@ -41,12 +41,12 @@ export default function () {
     }
 
     function prevSlide() {
-        sliderBtnNext.removeAttribute('style');
-        sliderBtnPrev.setAttribute('style', 'background-color: #313131;');
+        sliderBtnNext.setAttribute('style', 'background-color: #313131;');
+        sliderBtnPrev.setAttribute('style', 'background-color: #fbce51;');
 
         sliderCount--;
 
-        console.log('sliderCountPrev', sliderCount);
+        // console.log('sliderCountPrev', sliderCount);
 
         if (sliderCount < 0) {
             sliderCount = sliderImages.length - 1;
@@ -67,6 +67,9 @@ export default function () {
 
     sliderDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
+            sliderBtnPrev.removeAttribute('style');
+            sliderBtnNext.setAttribute('style', 'background-color: #313131;');
+
             sliderCount = index;
             rollSlider();
             thisSlide(sliderCount);
