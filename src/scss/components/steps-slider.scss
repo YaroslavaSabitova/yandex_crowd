@@ -6,14 +6,7 @@
     border: 1px solid red;
     overflow: hidden;
 
-    @media (max-width: 991px) {
-        max-width: 60rem;
-        max-height: 70rem;
-        padding-bottom: 15%;
-        overflow: hidden;
-    }
-
-    @media (max-width: 575px) {
+    @media (max-width: 767px) {
         max-width: 33.5rem;
         max-height: 36.4rem;
         padding-bottom: 6.4rem;
@@ -23,11 +16,15 @@
         display: grid;
         width: auto !important;
         max-width: 1222px !important;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, min-content);
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 2rem;
 
         @media (max-width: 991px) {
+            grid-gap: 1rem;
+        }
+
+        @media (max-width: 767px) {
             display: flex;
             width: 300rem !important;
             max-width: unset !important;
@@ -41,19 +38,12 @@
     &__img {
         position: relative;
         width: auto !important;
-        // height: 10rem;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
         border: 1px solid red;
 
-        @media (max-width: 991px) {
-            width: 100% !important;
-            height: 40rem;
-        }
-
-        @media (max-width: 575px) {
+        @media (max-width: 767px) {
+            width: 33.5rem !important;
             height: 30rem;
+            padding: 6.2rem 2rem 2rem !important;
         }
 
         &_1 {
@@ -64,14 +54,27 @@
             gap: 2rem;
 
             @media (max-width: 991px) {
-                background-image: url(../img/bg-steps-slider.png);
+                gap: 1rem;
+            }
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 2.8rem;
+                background: url(../img/bg-steps-slider.png) center/cover no-repeat;
             }
         }
 
         &_2 {
             grid-row: 1 / 3;
             grid-column: 9 / 13;
-            background-image: url(../img/bg-steps-slider.png);
+        }
+
+        &_2,
+        &_4,
+        &_5 {
+            background: url(../img/bg-steps-slider.png) center/cover no-repeat !important;
         }
 
         &_3 {
@@ -82,20 +85,26 @@
             gap: 2rem;
 
             @media (max-width: 991px) {
-                background-image: url(../img/bg-steps-slider.png);
+                gap: 1rem;
+            }
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 2.8rem;
+                background: url(../img/bg-steps-slider.png) center/cover no-repeat;
             }
         }
 
         &_4 {
             grid-row: 3 / 4;
             grid-column: 1 / 5;
-            background-image: url(../img/bg-steps-slider.png);
         }
 
         &_5 {
             grid-row: 3 / 4;
             grid-column: 5 / 13;
-            background-image: url(../img/bg-steps-slider.png);
         }
     }
 
@@ -104,9 +113,21 @@
         width: 50%;
         padding: 2rem;
         grid-template-columns: min-content 1fr;
-        background-image: url(../img/bg-steps-slider.png);
-        background-size: cover;
+        align-items: start;
+        justify-items: start;
+        background: url(../img/bg-steps-slider.png) center/cover no-repeat;
+        border: 1px solid red;
         grid-gap: 0 1.6rem;
+
+        @media (max-width: 991px) {
+            padding: 1rem;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            padding: 0;
+            background: unset;
+        }
 
         &-number {
             display: flex;
@@ -129,10 +150,18 @@
             font-size: 2rem;
             line-height: 120%;
             color: var(--color-text);
+
+            @media (max-width: 991px) {
+                font-size: 1.5rem;
+            }
         }
 
         &_seventh p {
             width: 58%;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
         }
     }
 
@@ -140,11 +169,11 @@
         position: absolute;
         display: none;
 
-        @media (max-width: 991px) {
+        @media (max-width: 767px) {
             bottom: 1%;
             display: block;
-            width: 4rem;
-            height: 4rem;
+            width: 3.6rem;
+            height: 3.6rem;
             background-color: rgba(49, 49, 49, 0.2);
             border: none;
             border-radius: 100%;
@@ -152,27 +181,14 @@
             transition: all 0.3s ease;
         }
 
-        @media (max-width: 575px) {
-            width: 3.6rem;
-            height: 3.6rem;
-        }
-
         &_prev {
-            @media (max-width: 991px) {
-                left: 17%;
-            }
-
-            @media (max-width: 575px) {
+            @media (max-width: 767px) {
                 left: 22%;
             }
         }
 
         &_next {
-            @media (max-width: 991px) {
-                right: 17%;
-            }
-
-            @media (max-width: 575px) {
+            @media (max-width: 767px) {
                 right: 22%;
             }
         }
@@ -192,7 +208,7 @@
         position: absolute;
         display: none;
 
-        @media (max-width: 991px) {
+        @media (max-width: 767px) {
             bottom: 3%;
             left: 50%;
             display: flex;
@@ -200,7 +216,7 @@
             transform: translateX(-50%);
         }
 
-        @media (max-width: 575px) {
+        @media (max-width: 767px) {
             bottom: 5%;
             gap: 6px;
         }
@@ -209,19 +225,14 @@
     &__dot {
         display: none;
 
-        @media (max-width: 991px) {
+        @media (max-width: 767px) {
             display: block;
-            width: 2rem;
-            height: 2rem;
+            width: 1rem;
+            height: 1rem;
             background-color: var(--color-dot);
             border: none;
             border-radius: 100%;
             transition: background-color 0.3s ease;
-        }
-
-        @media (max-width: 575px) {
-            width: 1rem;
-            height: 1rem;
         }
 
         &.active-dot {
