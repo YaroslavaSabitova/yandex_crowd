@@ -174,7 +174,7 @@
             display: block;
             width: 3.6rem;
             height: 3.6rem;
-            background-color: rgba(49, 49, 49, 0.2);
+            // background-color: rgba(49, 49, 49, 0.2);
             border: none;
             border-radius: 100%;
             animation: 1.5s linear infinite btn;
@@ -201,6 +201,10 @@
         &:active,
         &:active {
             background-color: var(--color-text);
+        }
+
+        &:disabled {
+            background-color: var(--color-disabled);
         }
     }
 

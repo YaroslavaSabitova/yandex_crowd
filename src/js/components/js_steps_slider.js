@@ -8,7 +8,10 @@ export default function () {
     let sliderCount = 0,
         sliderWidth;
 
+    const maxStep = sliderImages.length - 1;
+
     if (sliderCount >= 0) {
+        sliderBtnPrev.setAttribute('disabled', 'disabled');
         sliderBtnNext.setAttribute('style', 'background-color: #313131;');
     }
 
@@ -24,7 +27,28 @@ export default function () {
     }
     showSlide();
 
+    function endSlider() {
+        if (sliderCount === maxStep) {
+            sliderBtnNext.removeAttribute('style');
+            sliderBtnNext.setAttribute('disabled', 'disabled');
+            sliderBtnPrev.setAttribute('style', 'background-color: #313131;');
+        } else {
+            sliderBtnNext.removeAttribute('disabled', 'disabled');
+        }
+    }
+
+    function startSlider() {
+        if (sliderCount === 0) {
+            sliderBtnPrev.removeAttribute('style');
+            sliderBtnPrev.setAttribute('disabled', 'disabled');
+            sliderBtnNext.setAttribute('style', 'background-color: #313131;');
+        } else {
+            sliderBtnPrev.removeAttribute('disabled', 'disabled');
+        }
+    }
+
     function nextSlide() {
+        sliderBtnPrev.removeAttribute('disabled', 'disabled');
         sliderBtnPrev.setAttribute('style', 'background-color: #313131;');
         sliderBtnNext.setAttribute('style', 'background-color: #fbce51;');
 
@@ -32,15 +56,14 @@ export default function () {
 
         // console.log('sliderCountNext', sliderCount);
 
-        if (sliderCount >= sliderImages.length) {
-            sliderCount = 0;
-        }
+        endSlider();
 
         rollSlider();
         thisSlide(sliderCount);
     }
 
     function prevSlide() {
+        sliderBtnNext.removeAttribute('disabled', 'disabled');
         sliderBtnNext.setAttribute('style', 'background-color: #313131;');
         sliderBtnPrev.setAttribute('style', 'background-color: #fbce51;');
 
@@ -48,9 +71,7 @@ export default function () {
 
         // console.log('sliderCountPrev', sliderCount);
 
-        if (sliderCount < 0) {
-            sliderCount = sliderImages.length - 1;
-        }
+        startSlider();
 
         rollSlider();
         thisSlide(sliderCount);
@@ -67,10 +88,16 @@ export default function () {
 
     sliderDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            sliderBtnPrev.removeAttribute('style');
+            sliderBtnPrev.setAttribute('style', 'background-color: #313131;');
             sliderBtnNext.setAttribute('style', 'background-color: #313131;');
 
             sliderCount = index;
+
+            endSlider(index);
+            startSlider(index);
+
+            // console.log('index', index);
+
             rollSlider();
             thisSlide(sliderCount);
         });
