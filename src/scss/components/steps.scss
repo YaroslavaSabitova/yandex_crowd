@@ -12,6 +12,10 @@
         margin-bottom: 5.4rem;
 
         @media (max-width: 991px) {
+            margin-bottom: 10rem;
+        }
+
+        @media (max-width: 575px) {
             max-width: 100%;
             margin-bottom: 20.4rem;
         }
@@ -36,6 +40,18 @@
             }
 
             @media (max-width: 767px) {
+                bottom: -35%;
+            }
+
+            @media (max-width: 575px) {
+                bottom: -50%;
+            }
+
+            @media (max-width: 510px) {
+                bottom: -35%;
+            }
+
+            @media (max-width: 444px) {
                 bottom: -50%;
             }
         }

@@ -10,4 +10,8 @@
         font-size: 3.6rem;
         line-height: 110%;
     }
+
+    @media (max-width: 340px) {
+        font-size: 3rem;
+    }
 }
