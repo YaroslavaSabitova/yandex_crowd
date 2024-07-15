@@ -6,6 +6,73 @@
         margin-bottom: 12rem;
     }
 
+    &::before {
+        @include pseudoelem;
+        top: unset;
+        right: -40px;
+        bottom: 25px;
+        left: unset;
+        z-index: 2;
+        width: 353px;
+        height: 193px;
+        background: url(../img/airplane.png) 0 0 / contain no-repeat;
+        border: 1px solid red;
+        animation: float 4s linear infinite;
+        transform: rotate(0deg) translate3d(5px, 5px, 0) rotate(0deg);
+
+        @media (max-width: 1300px) {
+            right: -70px;
+            bottom: 75px;
+            width: 340px;
+            height: 187px;
+        }
+
+        @media (max-width: 1199px) {
+            bottom: 115px;
+            width: 300px;
+            height: 167px;
+        }
+
+        @media (max-width: 991px) {
+            right: -40px;
+            bottom: 0px;
+        }
+
+        @media (max-width: 767px) {
+            bottom: 10px;
+            width: 259px;
+            height: 143px;
+        }
+
+        @media (max-width: 680px) {
+            bottom: 60px;
+            width: 210px;
+            height: 120px;
+        }
+
+        @media (max-width: 575px) {
+            top: 170px;
+            right: 50px;
+            bottom: unset;
+            width: 302px;
+            height: 173px;
+        }
+
+        @media (max-width: 444px) {
+            right: 0px;
+        }
+
+        @media (max-width: 376px) {
+            top: 210px;
+        }
+
+        @media (max-width: 370px) {
+            top: 190px;
+            width: 230px;
+            height: 125px;
+        }
+    }
+
     &__title {
         position: relative;
         max-width: 80rem;
@@ -55,5 +122,15 @@
                 bottom: -50%;
             }
         }
+    }
+}
+
+@keyframes float {
+    from {
+        transform: rotate(0deg) translate3d(5px, 5px, 0) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate3d(5px, 5px, 0) rotate(-360deg);
     }
 }
