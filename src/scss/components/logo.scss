@@ -12,6 +12,14 @@
         max-width: 21.3rem;
     }
 
+    &:hover &__image path {
+        fill: var(--color-black);
+    }
+
+    &:hover &__text {
+        color: var(--color-black);
+    }
+
     &__image {
         display: flex;
         width: 37.5%;
@@ -21,6 +29,7 @@
         justify-content: space-between;
 
         &_horse path {
+            transition: fill 0.3s ease;
             fill: var(--color-grey);
         }
     }
@@ -36,6 +45,7 @@
         line-height: 108%;
         text-transform: uppercase;
         color: var(--color-grey);
+        transition: color 0.3s ease;
 
         @media (max-width: 376px) {
             font-size: 14.42px;
