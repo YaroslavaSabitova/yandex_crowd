@@ -1,0 +1,62 @@
+.players-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    // overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__img {
+        display: flex;
+        width: 33%;
+        flex-direction: column;
+        flex-shrink: 0;
+        align-items: center;
+        font-family: var(--font-family);
+        text-align: center;
+        color: var(--color-text);
+
+        &:hover &_photo {
+            background: url(../img/player-hover.png) center/cover no-repeat;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        &_photo {
+            width: 32rem;
+            height: 32rem;
+            margin-bottom: 2.8rem;
+            background: url(../img/player.png) center/cover no-repeat;
+            border: none;
+            border-radius: 100%;
+            transition: all 0.5s ease;
+        }
+
+        &-name {
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 120%;
+        }
+
+        &-title {
+            margin-bottom: 2rem;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 120%;
+        }
+
+        &-link {
+            padding: 1.2rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 120%;
+            color: var(--color-blue-accent);
+            border: 1px solid var(--color-blue-accent);
+            border-radius: 62px;
+        }
+    }
+}
