@@ -14,7 +14,15 @@ body {
 
     &::after {
         content: url(../img/bg.png) url(../img/city.png) url(../img/horse.png) url(../img/king.png)
-            url(../img/pawn.png) url(../img/queen.png);
+            url(../img/pawn.png) url(../img/queen.png) url(../img/airplane.png)
+            url(../img/banknote.png) url(../img/bg-steps-slider.png) url(../img/chess-players.png)
+            url(../img/city-s.png) url(../img/hand.png) url(../img/horse-black.png)
+            url(../img/horse-s.png) url(../img/king-s.png) url(../img/paper.png)
+            url(../img/player-hover-1.png) url(../img/player-hover-2.png)
+            url(../img/player-hover-3.png) url(../img/player-hover-4.png)
+            url(../img/player-hover-5.png) url(../img/player-hover-6.png) url(../img/player.png)
+            url(../img/player1.png) url(../img/player2.png) url(../img/queen-s.png)
+            url(../img/splash-big.png) url(../img/splash-small.png);
         position: absolute;
         z-index: -1;
         width: 0;
