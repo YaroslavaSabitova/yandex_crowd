@@ -33,8 +33,15 @@
         z-index: 2;
 
         @media (max-width: 376px) {
-            top: 13.5%;
+            top: 12%;
         }
+    }
+
+    &__red-line {
+        position: absolute;
+        top: 100%;
+        transform: translateY(-100%);
+        z-index: 100;
     }
 
     &__text {
@@ -150,45 +157,47 @@
         }
 
         &_circle {
-            max-width: 66rem;
-            max-height: 66rem;
+            transform: translateX(93%) translateY(-28%) translateZ(-100px) scale(2);
+            max-width: 68rem;
+            max-height: 68rem;
             background-color: var(--color-accent);
             border: none;
             border-radius: 100%;
-            transform: translateX(100%) translateY(-28%) translateZ(-100px) scale(2);
 
             @media (max-width: 1399px) {
-                transform: translateX(100%) translateY(-28%) translateZ(-100px) scale(2);
+                transform: translateX(97%) translateY(-22%) translateZ(-100px) scale(2);
+                max-width: 66rem;
+                max-height: 66rem;
             }
 
             @media (max-width: 1199px) {
+                transform: translateX(105%) translateY(-5%) translateZ(-100px) scale(2);
                 max-width: 55rem;
                 max-height: 55rem;
-                transform: translateX(105%) translateY(-5%) translateZ(-100px) scale(2);
             }
 
             @media (max-width: 991px) {
+                transform: translateX(97%) translateY(37%) translateZ(-100px) scale(2);
                 max-width: 50rem;
                 max-height: 50rem;
-                transform: translateX(97%) translateY(37%) translateZ(-100px) scale(2);
             }
 
             @media (max-width: 767px) {
+                transform: translateX(105%) translateY(63%) translateZ(-100px) scale(2);
                 max-width: 45rem;
                 max-height: 45rem;
-                transform: translateX(105%) translateY(63%) translateZ(-100px) scale(2);
             }
 
             @media (max-width: 575px) {
+                transform: translateX(0%) translateY(100%) translateZ(-100px) scale(2);
                 max-width: 40rem;
                 max-height: 40rem;
-                transform: translateX(0%) translateY(100%) translateZ(-100px) scale(2);
             }
 
             @media (max-width: 376px) {
+                transform: translateX(-9%) translateY(185%) translateZ(-100px) scale(2);
                 max-width: 30rem;
                 max-height: 30rem;
-                transform: translateX(-3%) translateY(150%) translateZ(-100px) scale(2);
             }
 
             &-text {
@@ -223,56 +232,83 @@
         }
 
         &_queen {
+            transform: translateY(-122px) translateZ(-85px) scale(1.85);
             background: url(../img/queen.png) center bottom/contain no-repeat;
-            transform: translateY(0px) translateZ(-85px) scale(1.85);
+
+            @media (max-width: 1399px) {
+                transform: translateY(-166px) translateZ(-85px) scale(1.85);
+            }
+
+            @media (max-width: 991px) {
+                transform: translateX(-32px) translateY(-150px) translateZ(-85px) scale(1.85);
+            }
 
             @media (max-width: 575px) {
+                transform: translateX(27px) translateY(-54px) translateZ(-85px) scale(1.85);
                 background: url(../img/queen-s.png) center bottom/contain no-repeat;
             }
         }
 
         &_king {
+            transform: translateY(-107px) translateZ(-75px) scale(1.75);
             background: url(../img/king.png) center bottom/contain no-repeat;
-            transform: translateY(0px) translateZ(-75px) scale(1.75);
+
+            @media (max-width: 1399px) {
+                transform: translateX(-64px) translateY(-146px) translateZ(-75px) scale(1.75);
+            }
+
+            @media (max-width: 991px) {
+                transform: translateX(-13px) translateY(-145px) translateZ(-75px) scale(1.75);
+            }
 
             @media (max-width: 575px) {
+                transform: translateX(13px) translateY(-65px) translateZ(-75px) scale(1.75);
                 background: url(../img/king-s.png) center bottom/contain no-repeat;
             }
         }
 
         &_city {
+            transform: translateY(-90px) translateZ(-50px) scale(1.5);
             background: url(../img/city.png) center bottom/contain no-repeat;
-            transform: translateY(0px) translateZ(-50px) scale(1.5);
+
+            @media (max-width: 1399px) {
+                transform: translateX(-70px) translateY(-128px) translateZ(-50px) scale(1.6);
+            }
+
+            @media (max-width: 991px) {
+                transform: translateX(-70px) translateY(-95px) translateZ(-50px) scale(1.6);
+            }
 
             @media (max-width: 575px) {
+                transform: translateX(-3px) translateY(-55px) translateZ(-50px) scale(1.5);
                 background: url(../img/city-s.png) center bottom/contain no-repeat;
             }
         }
 
         &_pawn {
+            transform: translateY(-69px) translateZ(-15px) scale(1.15);
             background: url(../img/pawn.png) center bottom/contain no-repeat;
-            transform: translateY(0px) translateZ(-15px) scale(1.15);
-        }
 
-        &_horse {
-            background: url(../img/horse.png) center bottom/contain no-repeat;
-            transform: translateY(45px) translateZ(0px) scale(1);
-
-            @media (max-width: 1199px) {
-                transform: translateY(34px) translateZ(0px) scale(1);
+            @media (max-width: 1399px) {
+                transform: translateX(-25px) translateY(-69px) translateZ(-15px) scale(1.15);
             }
 
             @media (max-width: 991px) {
-                transform: translateY(20px) translateZ(0px) scale(1);
+                transform: translateX(-25px) translateY(-45px) translateZ(-15px) scale(1.15);
+            }
+        }
+
+        &_horse {
+            transform: translateY(-18px) translateZ(0px) scale(1);
+            background: url(../img/horse.png) center bottom/contain no-repeat;
+
+            @media (max-width: 1399px) {
+                transform: translateX(-56px) translateY(-26px) translateZ(0) scale(1);
             }
 
             @media (max-width: 575px) {
+                transform: translateX(-40px) translateY(-15px) translateZ(0) scale(1);
                 background: url(../img/horse-s.png) center bottom/contain no-repeat;
-                transform: translateY(16px) translateZ(0) scale(1);
-            }
-
-            @media (max-width: 376px) {
-                transform: translateX(-35px) translateY(16px) translateZ(0) scale(1);
             }
         }
     }

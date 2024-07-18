@@ -47,6 +47,7 @@
     &__img {
         position: relative;
         width: auto !important;
+        transition: all 0.3s ease;
 
         @media (max-width: 575px) {
             width: 33.5rem !important;
@@ -58,6 +59,18 @@
             width: 25rem !important;
             height: 31rem;
             padding: 3rem 1rem 2rem !important;
+        }
+
+        &:hover {
+            @media (max-width: 575px) {
+                filter: brightness(1.05);
+            }
+        }
+
+        &:hover .steps-slider__info-number {
+            @media (max-width: 575px) {
+                border: 1px solid rgba(49, 49, 49, 0.3);
+            }
         }
 
         &_1 {
@@ -164,6 +177,10 @@
             filter: brightness(1.05);
         }
 
+        &:hover &-number {
+            border: 1px solid rgba(49, 49, 49, 0.3);
+        }
+
         &-number {
             display: flex;
             width: 3.6rem;
@@ -176,7 +193,9 @@
             line-height: 120%;
             color: var(--color-text);
             background-color: var(--color-white);
+            border: 1px solid var(--color-transparent);
             border-radius: 100%;
+            transition: border 0.3s ease;
         }
 
         &-text {

@@ -1,0 +1,12 @@
+.text-blue {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    text-transform: none;
+    color: var(--color-blue-accent);
+
+    @media (max-width: 991px) {
+        font-size: 1.8rem;
+    }
+}
