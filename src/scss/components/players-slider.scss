@@ -24,6 +24,14 @@
         color: var(--color-text);
         border: 1px solid blue;
 
+        @media (max-width: 991px) {
+            width: 50%;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+
         &:hover &-photo {
             box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
         }
@@ -53,13 +61,19 @@
         }
 
         &-photo {
-            width: 32rem;
+            width: 81.5%;
             height: 32rem;
+            max-height: 32rem;
             margin-bottom: 2.8rem;
             background: url(../img/player.png) center/cover no-repeat;
             border: none;
             border-radius: 100%;
             transition: all 0.5s ease;
+
+            @media (max-width: 767px) {
+                width: 24.4rem;
+                height: 24.4rem;
+            }
         }
 
         &-name {
@@ -67,6 +81,10 @@
             font-weight: 600;
             font-size: 2.4rem;
             line-height: 120%;
+
+            @media (max-width: 767px) {
+                margin-bottom: 8px;
+            }
         }
 
         &-title {
@@ -106,6 +124,18 @@
         right: 0;
         max-width: 15.1rem;
         gap: 1.4rem;
+
+        @media (max-width: 991px) {
+            top: -0.5%;
+        }
+
+        @media (max-width: 767px) {
+            top: unset;
+            right: unset;
+            bottom: -14%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     &__pagination {
@@ -121,6 +151,11 @@
         border-radius: 100%;
         // animation: 1.5s linear infinite btn;
         transition: all 0.3s ease;
+
+        @media (max-width: 767px) {
+            width: 3.6rem;
+            height: 3.6rem;
+        }
 
         &:hover {
             background-color: var(--color-accent);

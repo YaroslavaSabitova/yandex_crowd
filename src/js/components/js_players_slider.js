@@ -3,21 +3,15 @@ export default function () {
     const sliderLine = document.querySelector('.js_players_wrapper');
     const sliderBtnNext = document.querySelector('.js_players_next');
     const sliderBtnPrev = document.querySelector('.js_players_prev');
+    const currentPlayers = document.querySelector('.js_players_current');
+    const totalPlayers = document.querySelector('.js_players_total');
 
-    const sliderWidth = document.querySelector('.players-slider').offsetWidth;
     const sliderGap = 20;
     const img = document.querySelector('.players-slider__img').offsetWidth;
     const imgWidth = img + sliderGap;
 
-    console.log('sliderWidth', sliderWidth);
-    console.log('img', img);
-    console.log('imgWidth', imgWidth);
-
-    const totalLength = imgWidth * sliderImages.length;
-    console.log('totalLength', totalLength);
-
-    const finalLength = totalLength - 3 * imgWidth;
-    console.log('finalLength', finalLength);
+    // console.log('img', img);
+    // console.log('imgWidth', imgWidth);
 
     let shift = 1;
     let position = 0;
@@ -28,7 +22,7 @@ export default function () {
         sliderBtnNext.setAttribute('style', 'background-color: #313131;');
     }
 
-    sliderBtnNext.onclick = function () {
+    function nextPlayersSlide() {
         sliderBtnPrev.removeAttribute('disabled', 'disabled');
         sliderBtnNext.setAttribute('style', 'background-color: #fbce51;');
 
@@ -36,34 +30,33 @@ export default function () {
 
         position += imgWidth * shift;
 
-        sliderLine.setAttribute('style', `transform: translateX(${-position}px)`);
+        // console.log('position', position);
 
-        console.log('position', position);
+        sliderLine.setAttribute('style', `transform: translateX(${-position}px)`);
 
         if (sliderCount >= sliderImages.length - 2) {
             sliderCount = 0;
             position = 0;
 
             sliderLine.setAttribute('style', `transform: translateX(${position}px)`);
+            sliderBtnNext.setAttribute('style', 'background-color: #313131;');
             sliderBtnPrev.setAttribute('disabled', 'disabled');
         }
+    }
 
-        console.log('sliderCount', sliderCount);
-    };
-
-    sliderBtnPrev.onclick = function () {
+    function prevPlayersSlide() {
         sliderBtnPrev.setAttribute('style', 'background-color: #fbce51;');
         sliderBtnNext.setAttribute('style', 'background-color: #313131;');
 
         sliderCount--;
+
+        // console.log('sliderCount', sliderCount);
 
         if (sliderCount <= 0) {
             sliderBtnPrev.removeAttribute('style');
             sliderBtnPrev.setAttribute('disabled', 'disabled');
             sliderBtnNext.setAttribute('style', 'background-color: #313131;');
         }
-
-        console.log('sliderCount2', sliderCount);
 
         position -= imgWidth * shift;
 
@@ -73,5 +66,12 @@ export default function () {
             sliderBtnPrev.setAttribute('disabled', 'disabled');
             sliderBtnNext.setAttribute('style', 'background-color: #313131;');
         }
-    };
+    }
+
+    sliderBtnNext.onclick = nextPlayersSlide;
+    sliderBtnPrev.onclick = prevPlayersSlide;
+
+    setInterval(() => {
+        nextPlayersSlide();
+    }, 4000);
 }
