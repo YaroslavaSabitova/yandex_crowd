@@ -1,9 +1,9 @@
 export default function () {
-    const sliderImages = document.querySelectorAll('.steps-slider__img');
-    const sliderLine = document.querySelector('.steps-slider__wrapper');
-    const sliderDots = document.querySelectorAll('.steps-slider__dot');
-    const sliderBtnNext = document.querySelector('.steps-slider__btn_next');
-    const sliderBtnPrev = document.querySelector('.steps-slider__btn_prev');
+    const sliderImages = document.querySelectorAll('.js_steps_img');
+    const sliderLine = document.querySelector('.js_steps_wrapper');
+    const sliderDots = document.querySelectorAll('.js_steps_dot');
+    const sliderBtnNext = document.querySelector('.js_steps_next');
+    const sliderBtnPrev = document.querySelector('.js_steps_prev');
 
     let sliderCount = 0,
         sliderWidth;

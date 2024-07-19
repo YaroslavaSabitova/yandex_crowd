@@ -262,12 +262,10 @@
             }
         }
 
-        &:hover,
         &:hover {
             background-color: var(--color-accent);
         }
 
-        &:active,
         &:active {
             background-color: var(--color-text);
         }
@@ -284,9 +282,9 @@
         @media (max-width: 575px) {
             bottom: 5%;
             left: 50%;
+            transform: translateX(-50%);
             display: flex;
             gap: 6px;
-            transform: translateX(-50%);
         }
 
         @media (max-width: 370px) {
