@@ -10,9 +10,6 @@ export default function () {
     const img = document.querySelector('.players-slider__img').offsetWidth;
     const imgWidth = img + sliderGap;
 
-    // console.log('img', img);
-    // console.log('imgWidth', imgWidth);
-
     let shift = 1;
     let position = 0;
     let sliderCount = 0;
@@ -30,18 +27,37 @@ export default function () {
 
         position += imgWidth * shift;
 
-        // console.log('position', position);
+        console.log('sliderCount', sliderCount);
 
         sliderLine.setAttribute('style', `transform: translateX(${-position}px)`);
 
-        if (sliderCount >= sliderImages.length - 2) {
-            sliderCount = 0;
-            position = 0;
-
-            sliderLine.setAttribute('style', `transform: translateX(${position}px)`);
-            sliderBtnNext.setAttribute('style', 'background-color: #313131;');
-            sliderBtnPrev.setAttribute('disabled', 'disabled');
+        if (window.innerWidth <= 766 && window.innerWidth >= 0) {
+            if (sliderCount >= sliderImages.length) {
+                startPosition();
+            }
         }
+
+        if (
+            window.innerWidth >= 767 &&
+            990 >= window.innerWidth &&
+            sliderCount >= sliderImages.length - 2
+        ) {
+            if (sliderCount >= sliderImages.length - 1) {
+                startPosition();
+            }
+        }
+
+        if (window.innerWidth >= 991 && sliderCount >= sliderImages.length - 2) {
+            startPosition();
+        }
+    }
+
+    function startPosition() {
+        sliderCount = 0;
+        position = 0;
+        sliderLine.setAttribute('style', `transform: translateX(${position}px)`);
+        sliderBtnNext.setAttribute('style', 'background-color: #313131;');
+        sliderBtnPrev.setAttribute('disabled', 'disabled');
     }
 
     function prevPlayersSlide() {
@@ -71,7 +87,7 @@ export default function () {
     sliderBtnNext.onclick = nextPlayersSlide;
     sliderBtnPrev.onclick = prevPlayersSlide;
 
-    setInterval(() => {
-        nextPlayersSlide();
-    }, 4000);
+    // setInterval(() => {
+    //     nextPlayersSlide();
+    // }, 4000);
 }
