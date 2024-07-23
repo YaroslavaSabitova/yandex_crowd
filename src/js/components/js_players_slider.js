@@ -16,9 +16,6 @@ export default function () {
     let currentValue = currentPlayers.textContent;
     let totalValue = totalPlayers.textContent;
 
-    // console.log('currentValue', currentValue);
-    // console.log('totalValue', totalValue);
-
     if (sliderCount === 0) {
         sliderBtnPrev.setAttribute('disabled', 'disabled');
         sliderBtnNext.setAttribute('style', 'background-color: #313131;');
@@ -36,24 +33,24 @@ export default function () {
 
     function nextPlayersSlide() {
         sliderBtnPrev.removeAttribute('disabled', 'disabled');
+        sliderBtnPrev.setAttribute('style', 'background-color: #313131;');
         sliderBtnNext.setAttribute('style', 'background-color: #fbce51;');
 
         sliderCount++;
 
         currentValue++;
-        // console.log('currentValue2', currentValue);
         currentPlayers.textContent = currentValue;
         changeValue();
 
         position += imgWidth * shift;
-
-        // console.log('sliderCount', sliderCount);
 
         sliderLine.setAttribute('style', `transform: translateX(${-position}px)`);
 
         if (window.innerWidth <= 766) {
             if (sliderCount >= sliderImages.length) {
                 startPosition();
+                sliderBtnPrev.removeAttribute('style', 'background-color: #313131;');
+                sliderBtnPrev.setAttribute('disabled', 'disabled');
             }
         }
 
@@ -64,11 +61,15 @@ export default function () {
         ) {
             if (sliderCount >= sliderImages.length - 1) {
                 startPosition();
+                sliderBtnPrev.removeAttribute('style', 'background-color: #313131;');
+                sliderBtnPrev.setAttribute('disabled', 'disabled');
             }
         }
 
         if (window.innerWidth >= 991 && sliderCount >= sliderImages.length - 2) {
             startPosition();
+            sliderBtnPrev.removeAttribute('style', 'background-color: #313131;');
+            sliderBtnPrev.setAttribute('disabled', 'disabled');
         }
     }
 
@@ -106,8 +107,6 @@ export default function () {
         currentValue--;
         console.log('currentValuePrev', currentValue);
         currentPlayers.textContent = currentValue;
-
-        // console.log('sliderCount', sliderCount);
 
         if (sliderCount <= 0) {
             sliderBtnPrev.removeAttribute('style');

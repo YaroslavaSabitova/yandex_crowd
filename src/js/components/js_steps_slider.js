@@ -54,8 +54,6 @@ export default function () {
 
         sliderCount++;
 
-        // console.log('sliderCountNext', sliderCount);
-
         endSlider();
 
         rollSlider();
@@ -68,8 +66,6 @@ export default function () {
         sliderBtnPrev.setAttribute('style', 'background-color: #fbce51;');
 
         sliderCount--;
-
-        // console.log('sliderCountPrev', sliderCount);
 
         startSlider();
 
@@ -95,8 +91,6 @@ export default function () {
 
             endSlider(index);
             startSlider(index);
-
-            // console.log('index', index);
 
             rollSlider();
             thisSlide(sliderCount);

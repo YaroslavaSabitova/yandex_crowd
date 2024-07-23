@@ -63,10 +63,6 @@
             &_lecture {
                 max-width: 76.4rem;
 
-                @media (max-width: 1399px) {
-                    max-width: 75rem;
-                }
-
                 @media (max-width: 1199px) {
                     max-width: 60rem;
                 }
@@ -188,8 +184,8 @@
             }
 
             &_splash-big {
-                animation: splash-big 2s ease-in-out 2s infinite;
                 transform: scale(1.05);
+                animation: splash-big 2s ease-in-out 2s infinite;
             }
 
             &_player2 {
@@ -203,8 +199,8 @@
             }
 
             &_splash-small {
-                animation: splash-small 2s linear 2s infinite;
                 transform: scale(1);
+                animation: splash-small 2s linear 2s infinite;
                 transform-origin: center left;
             }
 
@@ -214,8 +210,8 @@
             }
 
             &_hand {
-                animation: hand 2s ease-in-out 2s infinite;
                 transform: rotate(-15deg);
+                animation: hand 2s ease-in-out 2s infinite;
                 transform-origin: center;
             }
         }
@@ -267,8 +263,8 @@
     }
 
     40% {
-        opacity: 1;
         transform: skew(2deg, 2deg);
+        opacity: 1;
     }
 
     50% {
@@ -282,14 +278,14 @@
     }
 
     70% {
+        transform: skew(2deg, 2deg);
         opacity: 1;
         filter: grayscale(1);
-        transform: skew(2deg, 2deg);
     }
 
     80% {
-        opacity: 1;
         transform: skew(0deg, 0deg);
+        opacity: 1;
     }
 }
 
@@ -301,16 +297,16 @@
 
 @keyframes banknote {
     0% {
-        opacity: 1;
         transform: translateY(0);
+        opacity: 1;
     }
     50% {
-        opacity: 0;
         transform: translateY(-10%);
+        opacity: 0;
     }
     100% {
-        opacity: 1;
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
