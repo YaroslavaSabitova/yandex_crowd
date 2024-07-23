@@ -13,10 +13,25 @@ export default function () {
     let shift = 1;
     let position = 0;
     let sliderCount = 0;
+    let currentValue = currentPlayers.textContent;
+    let totalValue = totalPlayers.textContent;
+
+    // console.log('currentValue', currentValue);
+    // console.log('totalValue', totalValue);
 
     if (sliderCount === 0) {
         sliderBtnPrev.setAttribute('disabled', 'disabled');
         sliderBtnNext.setAttribute('style', 'background-color: #313131;');
+    }
+
+    if (window.innerWidth >= 767 && 990 >= window.innerWidth) {
+        currentValue = 2;
+        currentPlayers.textContent = currentValue;
+    }
+
+    if (window.innerWidth <= 766) {
+        currentValue = 1;
+        currentPlayers.textContent = currentValue;
     }
 
     function nextPlayersSlide() {
@@ -25,13 +40,18 @@ export default function () {
 
         sliderCount++;
 
+        currentValue++;
+        // console.log('currentValue2', currentValue);
+        currentPlayers.textContent = currentValue;
+        changeValue();
+
         position += imgWidth * shift;
 
-        console.log('sliderCount', sliderCount);
+        // console.log('sliderCount', sliderCount);
 
         sliderLine.setAttribute('style', `transform: translateX(${-position}px)`);
 
-        if (window.innerWidth <= 766 && window.innerWidth >= 0) {
+        if (window.innerWidth <= 766) {
             if (sliderCount >= sliderImages.length) {
                 startPosition();
             }
@@ -52,6 +72,23 @@ export default function () {
         }
     }
 
+    function changeValue() {
+        if (currentValue > totalValue && window.innerWidth >= 991) {
+            currentValue = 3;
+            currentPlayers.textContent = currentValue;
+        }
+
+        if (currentValue > totalValue && window.innerWidth >= 767 && 990 >= window.innerWidth) {
+            currentValue = 2;
+            currentPlayers.textContent = currentValue;
+        }
+
+        if (currentValue > totalValue && window.innerWidth <= 766) {
+            currentValue = 1;
+            currentPlayers.textContent = currentValue;
+        }
+    }
+
     function startPosition() {
         sliderCount = 0;
         position = 0;
@@ -65,6 +102,10 @@ export default function () {
         sliderBtnNext.setAttribute('style', 'background-color: #313131;');
 
         sliderCount--;
+
+        currentValue--;
+        console.log('currentValuePrev', currentValue);
+        currentPlayers.textContent = currentValue;
 
         // console.log('sliderCount', sliderCount);
 
@@ -87,7 +128,7 @@ export default function () {
     sliderBtnNext.onclick = nextPlayersSlide;
     sliderBtnPrev.onclick = prevPlayersSlide;
 
-    // setInterval(() => {
-    //     nextPlayersSlide();
-    // }, 4000);
+    setInterval(() => {
+        nextPlayersSlide();
+    }, 4000);
 }
