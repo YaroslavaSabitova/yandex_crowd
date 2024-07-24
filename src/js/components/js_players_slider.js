@@ -49,8 +49,6 @@ export default function () {
         if (window.innerWidth <= 766) {
             if (sliderCount >= sliderImages.length) {
                 startPosition();
-                sliderBtnPrev.removeAttribute('style', 'background-color: #313131;');
-                sliderBtnPrev.setAttribute('disabled', 'disabled');
             }
         }
 
@@ -61,15 +59,11 @@ export default function () {
         ) {
             if (sliderCount >= sliderImages.length - 1) {
                 startPosition();
-                sliderBtnPrev.removeAttribute('style', 'background-color: #313131;');
-                sliderBtnPrev.setAttribute('disabled', 'disabled');
             }
         }
 
         if (window.innerWidth >= 991 && sliderCount >= sliderImages.length - 2) {
             startPosition();
-            sliderBtnPrev.removeAttribute('style', 'background-color: #313131;');
-            sliderBtnPrev.setAttribute('disabled', 'disabled');
         }
     }
 
@@ -95,6 +89,7 @@ export default function () {
         position = 0;
         sliderLine.setAttribute('style', `transform: translateX(${position}px)`);
         sliderBtnNext.setAttribute('style', 'background-color: #313131;');
+        sliderBtnPrev.removeAttribute('style', 'background-color: #313131;');
         sliderBtnPrev.setAttribute('disabled', 'disabled');
     }
 
